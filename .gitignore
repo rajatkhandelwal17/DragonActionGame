@@ -1,0 +1,2 @@
+This file named .gitignore is basically used to store those files, those folders that which we do not want to upload on the github repository.
+Suppose You have Some Larger Files That take some time to Download So we can leave that file..by writing the name of the folder inside this file.

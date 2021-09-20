@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    Padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh; 
+}
+
+/* background size cover dene se width or height usime involve karti hai...it will look better */
+/* position absolute dene se ye apne parent element ke according move karta hai */
+/* position relative dene se ye apne khud ke according jo position aati hai uske acc move krta h. */
+
+/* if the element has parent, grandparent, greatgrandparent then it will move according to the positioned parent..means that parent which has some position value like relative or absolute etc*/
+
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: 0px;
+    left: 71px;
+}
+.obstacle{
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 166px;
+    height: 113px;
+    position: absolute;
+    bottom: 0px;
+    left: 928px;
+}
+.animateDino{
+    animation: dino 0.6s linear;
+} 
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+.obstacleAni{
+    animation: obstacleAni 6s linear infinite;
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+#scoreCount{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+
